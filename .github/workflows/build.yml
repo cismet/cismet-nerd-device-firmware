@@ -37,3 +37,5 @@ jobs:
         run: pio ci --board=<BOARD_ID> --lib="."
         env:
           PLATFORMIO_CI_SRC: ${{ matrix.example }}
+      - name: List build output
+         run: ls -l .pio/build/ttgo-lora32-v1/
