@@ -11,7 +11,10 @@ jobs:
     strategy:
       matrix:
         example:
-          [path/to/test/file.c, examples/file.ino, path/to/test/directory]
+          - src/breakout/breakout.cpp
+          - src/main.cpp
+          - src/presence/presence.cpp
+          - src/tetris/tetris.cpp
 
     steps:
       - uses: actions/checkout@v3
@@ -31,6 +34,6 @@ jobs:
         run: pip install --upgrade platformio
 
       - name: Build PlatformIO examples
-        run: pio ci --board=<ID_1> --board=<ID_2> --board=<ID_N>
+        run: pio ci --board=<BOARD_ID> --lib="."
         env:
           PLATFORMIO_CI_SRC: ${{ matrix.example }}
