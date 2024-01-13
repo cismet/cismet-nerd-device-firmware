@@ -32,8 +32,9 @@ jobs:
 
       - name: Install PlatformIO Core
         run: pip install --upgrade platformio
-
-      - name: Build PlatformIO examples
+      - name: Install TFT_eSPI Library
+        run: platformio lib -g install "TFT_eSPI"
+      - name: Build code
         run: pio ci --board=ttgo-lora32-v1 --lib="."
         env:
           PLATFORMIO_CI_SRC: ${{ matrix.example }}
