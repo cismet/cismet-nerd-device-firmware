@@ -27,8 +27,6 @@ jobs:
       - name: Install TFT_eSPI Library
         run: platformio lib -g install "TFT_eSPI" "QRCode"
       - name: Build code
-        run: pio ci --board=ttgo-lora32-v1 --lib="."
-        env:
-          PLATFORMIO_CI_SRC: src/main.cpp src/breakout/breakout.cpp src/presence/presence.cpp src/tetris/tetris.cpp
+        run: pio ci --board=ttgo-lora32-v1 --lib="." src/main.cpp src/breakout/breakout.cpp src/presence/presence.cpp src/tetris/tetris.cpp
       - name: List build output
         run: ls -l .pio/build/ttgo-lora32-v1/
