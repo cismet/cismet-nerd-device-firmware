@@ -33,7 +33,7 @@ jobs:
       - name: Install PlatformIO Core
         run: pip install --upgrade platformio
       - name: Install TFT_eSPI Library
-        run: platformio lib -g install "TFT_eSPI"
+        run: platformio lib -g install "TFT_eSPI" "QRCode"
       - name: Build code
         run: pio ci --board=ttgo-lora32-v1 --lib="."
         env:
