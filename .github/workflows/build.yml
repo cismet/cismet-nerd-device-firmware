@@ -8,14 +8,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        example:
-          - src/breakout/breakout.cpp
-          - src/main.cpp
-          - src/presence/presence.cpp
-          - src/tetris/tetris.cpp
-
     steps:
       - uses: actions/checkout@v3
 
@@ -37,6 +29,6 @@ jobs:
       - name: Build code
         run: pio ci --board=ttgo-lora32-v1 --lib="."
         env:
-          PLATFORMIO_CI_SRC: ${{ matrix.example }}
+          PLATFORMIO_CI_SRC: src/main.cpp src/breakout/breakout.cpp src/presence/presence.cpp src/tetris/tetris.cpp
       - name: List build output
         run: ls -l .pio/build/ttgo-lora32-v1/
