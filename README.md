@@ -4,6 +4,22 @@ The cismet-nerd-device is a christmas gift for our staff. (ICQUANZX T-Display ES
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
+# Important Note ⚠️⚠️⚠️⚠️
+
+After first start of platformIO and the libraries are loaded got to this file:
+
+`.pio/libdeps/ttgo-lora32-v1/TFT_eSPI/User_Setup_Select.h`
+
+and uncomment this line
+
+```c++
+// #include <User_Setups/Setup23_TTGO_TM.h>           // Setup file for ESP32 and TTGO TM ST7789 SPI bus TFT
+// #include <User_Setups/Setup24_ST7789.h>            // Setup file for DSTIKE/ESP32/ESP8266 configured for ST7789 240 x 240
+#include <User_Setups/Setup25_TTGO_T_Display.h> // Setup file for ESP32 and TTGO T-Display ST7789V SPI bus TFT
+// #include <User_Setups/Setup26_TTGO_T_Wristband.h>  // Setup file for ESP32 and TTGO T-Wristband ST7735 SPI bus TFT
+
+```
+
 ![AA07C2AD-DBFA-4B2D-8B53-A8920661F868_1_105_c](https://github.com/cismet/cismet-nerd-device-firmware/assets/837211/664f3852-9506-47e6-8c13-2e2e0b74784e)
 
 ## Thanks
