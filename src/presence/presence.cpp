@@ -143,9 +143,9 @@ const uint16_t *getImageForEmployee(const std::string &name, const std::string &
     {
         return (status == "away") ? helllth_away : helllth;
     }
-    else if (name == "jruiz")
+    else if (name == "friedrich.hartmann")
     {
-        return (status == "away") ? jruiz_away : jruiz;
+        return (status == "away") ? friedrich_away : friedrich;
     }
     else if (name == "pavel")
     {
@@ -242,14 +242,14 @@ void loopPresence(PubSubClient &mqttClient)
             if (image != nullptr)
             {
                 tft.pushImage(x, y, 60, 60, image);
-            }
 
-            // Update position
-            x += columnWidth;
-            if (x + imageWidth > (isPortrait ? portraitWidth : landscapeWidth))
-            {
-                x = initialX;   // Reset x to initial value
-                y += 60 + gapY; // Move to next row
+                // Update position
+                x += columnWidth;
+                if (x + imageWidth > (isPortrait ? portraitWidth : landscapeWidth))
+                {
+                    x = initialX;   // Reset x to initial value
+                    y += 60 + gapY; // Move to next row
+                }
             }
         }
     }

@@ -6,14 +6,14 @@
 
 #include "avatars/david.h"
 #include "avatars/helllth.h"
-#include "avatars/jruiz.h"
+#include "avatars/friedrich.h"
 #include "avatars/pavel.h"
 #include "avatars/sabine.h"
 #include "avatars/therter.h"
 
 #include "avatars/david_away.h"
 #include "avatars/helllth_away.h"
-#include "avatars/jruiz_away.h"
+#include "avatars/friedrich_away.h"
 #include "avatars/pavel_away.h"
 #include "avatars/therter_away.h"
 #include "avatars/sabine_away.h"
