@@ -20,7 +20,7 @@ and uncomment this line
 
 ```
 
-![AA07C2AD-DBFA-4B2D-8B53-A8920661F868_1_105_c](https://github.com/cismet/cismet-nerd-device-firmware/assets/837211/664f3852-9506-47e6-8c13-2e2e0b74784e)
+![IMG_3077](https://github.com/cismet/cismet-nerd-device-firmware/assets/837211/94873de9-b696-48a9-aeaa-62c102c26328)
 
 ## Thanks
 
