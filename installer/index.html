@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cismet-nerd-device Firmware Installation</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif; /* Non-serif font */
+        background-color: #f4f4f4;
+      }
+      .container {
+        text-align: center;
+      }
+      .message {
+        margin-top: 20px;
+        font-size: 24px;
+        color: #333;
+      }
+      .install-button {
+        margin-top: 20px;
+      }
+    </style>
+    <script
+      type="module"
+      src="https://unpkg.com/esp-web-tools@9.0.3/dist/web/install-button.js?module"
+    ></script>
+
+    <script type="module">
+      import { initializeInstallButton } from "https://unpkg.com/esp-web-tools@7.2.0/dist/web/install-button.js";
+
+      window.addEventListener("DOMContentLoaded", (event) => {
+        initializeInstallButton({
+          manifest: "./manifest.json",
+          mode: "modal",
+          button: document.querySelector("#install-button"),
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="https://cismet.de/images/cismet_signet_rgb_buntesC.png"
+        alt="Company Logo"
+      />
+      <div class="message">Install cismet-nerd-device Firmware</div>
+      <p>
+        <esp-web-install-button
+          manifest="manifest.json"
+        ></esp-web-install-button>
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "cismet-nerd-device",
+  "version": "1.0.1",
+  "funding_url": "",
+  "new_install_prompt_erase": true,
+  "builds": [
+    {
+      "chipFamily": "ESP32",
+      "parts": [
+        {
+          "path": "bin/v1.0.1/bootloader.bin",
+          "offset": 4096
+        },
+        {
+          "path": "bin/v1.0.1/partitions.bin",
+          "offset": 32768
+        },
+        {
+          "path": "bin/v1.0.1/firmware.bin",
+          "offset": 65536
+        }
+      ]
+    }
+  ]
+}
